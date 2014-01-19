@@ -1,0 +1,19 @@
+A: Prerequisite
+1: Python
+
+B: 1: Run lexicalAnalyzer.py
+   2: Enter filename:
+   	eg: samples/staticScope.txt
+   3: The generated asm file will be in bin folder.
+
+
+C: Linux Instruction:
+
+Install:
+1: NASM
+	sudo apt-get install nasm
+2: gcc-multilib
+	sudo apt-get install gcc-multilib
+
+To see output of the generated asm file, go to the directory and run included script "run" with generated filename
+	eg: ./run bin/staticScopep.asm

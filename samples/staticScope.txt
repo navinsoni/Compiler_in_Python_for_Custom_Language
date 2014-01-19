@@ -1,0 +1,25 @@
+##-1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM staticScopep   
+
+DECLARE
+	INTEGER x;
+	INTEGER y;
+	INTEGER z;
+END
+ PROCEDURE ss1{ VALUE INTEGER z }
+	DECLARE
+        INTEGER y;
+    END
+      x <- 57;
+ 	 y <- 56;
+      OUTPUT  " ", x,y;
+ END   /* ss */
+ 
+ MAIN    
+  	 x <- 100;
+      y <- 50;
+      OUTPUT  " ", x,y;
+      CALL ss1{VALUE z};
+      OUTPUT  " ", x,y;
+   END   /* MAIN  */
+END

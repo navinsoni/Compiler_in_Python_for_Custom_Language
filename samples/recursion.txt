@@ -1,0 +1,22 @@
+##-1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM recursionp   
+
+DECLARE
+	INTEGER x;
+END
+
+PROCEDURE recur{ VALUE INTEGER x }
+ 	  OUTPUT  " ", x;
+ 	  x <- x - 1;
+        IF (x > 0) THEN
+        	CALL recur{VALUE x};
+        END;
+ 	  
+ END   /* recur */
+ 
+ MAIN    
+   x <- 10;
+      CALL recur{VALUE x};
+      OUTPUT  " ", x;
+   END   /* MAIN  */
+END

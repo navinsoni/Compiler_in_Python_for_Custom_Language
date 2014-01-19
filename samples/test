@@ -1,0 +1,12 @@
+##-1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM testp   
+
+DECLARE
+	INTEGER x;
+END
+     
+  MAIN    
+  	x <- 16;
+     OUTPUT  " ", x;
+   END   /* MAIN  */
+END

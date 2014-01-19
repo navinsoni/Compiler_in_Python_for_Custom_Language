@@ -1,0 +1,51 @@
+##+1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM test   
+
+DECLARE
+	INTEGER d;
+	INTEGER x;
+	INTEGER i;
+	INTEGER j;
+  	INTEGER sort 5;
+  	INTEGER temp;
+END
+
+ PROCEDURE cv{ VALUE INTEGER d }
+      d <- 10 ;
+    OUTPUT " ", d;
+  END   /* cv */
+
+
+
+  MAIN    
+  d <- 100;
+  x <- 50;
+      OUTPUT  " ", d;
+      CALL cv{VALUE d};
+      OUTPUT  " ", d;      
+      sort[0] <- 9;
+      sort[1] <- 18;
+      sort[2] <- 14;
+      sort[3] <- 81;
+      sort[4] <- 27;
+      
+      i <- 0;
+      j <- 0;
+    WHILE (i < 5) DO
+      WHILE ( j < 4 - i) DO
+        IF (sort[j]>sort[j+1]) THEN
+          temp <- sort[j+1];
+          sort[j] <- sort[j+1];
+          sort[j] <- temp;
+        END;
+        j <- j + 1;
+      END;
+      j <- 0;
+      i <- i + 1;
+    END;
+      
+      
+      
+  END   /* MAIN  */
+END     
+

@@ -1,0 +1,24 @@
+##+1+13+14+16    print the symbolic 4-tuples, etc. ##
+PROGRAM procedurep   
+
+DECLARE
+	INTEGER x;
+	INTEGER y;
+END
+
+PROCEDURE procedure{ VALUE INTEGER x, VALUE INTEGER y }
+ 	  DECLARE
+        INTEGER z;
+    END
+  	z <- x + y;
+  	OUTPUT  " ", z;
+ END   /* procedure */
+ 
+ MAIN    
+   x <- 10;
+   y <- 20;
+      CALL procedure{VALUE x, VALUE y};
+      OUTPUT  " ", z;
+   END   /* MAIN  */
+END
+

@@ -1,0 +1,18 @@
+##-1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM floatingPointArithmaticp   
+
+DECLARE
+	REAL x;
+  	REAL y;
+  	REAL z;
+END
+     
+  MAIN    
+  	x <- 37.45;
+  	y <- 14.87;
+  	z <- x + y;
+     OUTPUT  " ", z;
+  	z <- x - y;
+     OUTPUT  " ", z;
+   END   /* MAIN  */
+END

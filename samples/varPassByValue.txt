@@ -1,0 +1,20 @@
+##-1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM varPassByValuep   
+
+DECLARE
+	INTEGER x;
+END
+
+PROCEDURE cv{ VALUE INTEGER x }
+      x <- 1 ;
+    OUTPUT " ", x;
+  END   /* cv */
+  
+  MAIN    
+  x <- 100;
+      OUTPUT  " ", x;
+      CALL cv{VALUE x};
+      OUTPUT  " ", x;
+   END   /* MAIN  */
+END
+

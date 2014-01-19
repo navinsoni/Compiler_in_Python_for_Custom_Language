@@ -1,0 +1,10 @@
+if [ $# != '1' ]; then
+	echo Usage: ./run filename
+	exit
+fi
+
+clear
+nasm -f elf32 -o filename.o $1
+gcc -m32 -o filename filename.o
+./filename
+rm filename*

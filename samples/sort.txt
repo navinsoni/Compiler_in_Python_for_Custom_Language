@@ -1,0 +1,34 @@
+##-1+13-14-16    print the symbolic 4-tuples, etc. ##
+PROGRAM sortp
+
+DECLARE
+	INTEGER sort 5;
+  	INTEGER temp;
+  	INTEGER i;
+  	INTEGER j;
+END
+
+MAIN
+	 sort[0] <- -27;
+      sort[1] <- -18;
+      sort[2] <- -14;
+      sort[3] <- -81;
+      sort[4] <- -27;
+      
+      i <- 0;
+      j <- 0;
+    WHILE (i < 5) DO
+      WHILE ( j < 4 - i) DO
+        IF (sort[j]>sort[j+1]) THEN
+          temp <- sort[j];
+          sort[j] <- sort[j+1];
+          sort[j+1] <- temp;
+        END;
+        j <- j + 1;
+      END;
+      j <- 0;
+      i <- i + 1;
+    END; 
+    OUTPUT  " ", sort[0],sort[1],sort[2],sort[3],sort[4];        
+  END   /* MAIN  */
+END

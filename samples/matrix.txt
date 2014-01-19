@@ -1,0 +1,46 @@
+##-1+13+14+16    print the symbolic 4-tuples, etc. ##
+/*  This program should not contains any errors */
+PROGRAM matrixp   
+  DECLARE
+      INTEGER i;   
+      INTEGER j;   
+      INTEGER temp;   
+      INTEGER mat1 4 :: 4 ;   
+      INTEGER mat2 4 :: 4 ;   
+      INTEGER mat3 4 :: 4 ;
+  END
+
+  MAIN
+  i <- 0 ;
+  j <- 0 ;
+    WHILE (i < 3) DO
+      WHILE ( j < 3) DO
+      		mat1[i:j] <- 15 ;
+      		mat2[i:j] <- 20 ;
+      		j <- j + 1 ;
+      END;
+      j <- 0 ;
+      i <- i + 1 ;
+    END;
+    i <- 0 ;
+    j <- 0 ;
+    WHILE (i < 3) DO
+      WHILE ( j < 3) DO 
+            mat3[i:j] <-  mat1[i:j] + mat2[i:j];
+      		j <- j + 1 ;
+      END;
+      j <- 0 ; 
+      i <- i + 1 ; 
+    END;
+    i <- 0 ;
+    j <- 0 ;
+    WHILE (i < 3) DO
+      WHILE ( j < 3) DO
+      		 OUTPUT  " ", mat3[i:j];
+      		 j <- j + 1 ;
+      END;
+      j <- 0 ;
+      i <- i + 1 ;
+    END;
+      END   /* MAIN  */
+END     
